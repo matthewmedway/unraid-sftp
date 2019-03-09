@@ -1,6 +1,6 @@
 
 #build command:
-docker build ./sftp -t medway --build-arg password=test1234 --build-arg username=sftpuser \
+docker build ./sftp -t drbrocoli/unraid-sftp --build-arg password=test1234 --build-arg username=sftpuser \
 --build-arg publickey=rsa-testkey
 
 #run command:

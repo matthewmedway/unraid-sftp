@@ -7,9 +7,9 @@ ARG publickey
 MAINTAINER Matthew Medway
 
 RUN echo "${password} ${username}"
-RUN apt-get update
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" \
- -o Dpkg::Options::="--force-confold" install mysecureshell whois procps openssh-server apt-utils
+ -o Dpkg::Options::="--force-confold" install mysecureshell whois procps openssh-server
 RUN apt-get clean
 RUN mkdir /var/run/sshd
 RUN mkdir /data
