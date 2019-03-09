@@ -1,0 +1,9 @@
+version: '3'
+services:
+  sftp:
+    container_name: sftp
+    restart: unless-stopped
+    ports:
+      - 22222:22/tcp
+    build:
+    hostname: <hostname>
