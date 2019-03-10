@@ -6,7 +6,7 @@ ARG publickey
 
 MAINTAINER Matthew Medway
 
-RUN echo "${password} ${username}"
+RUN echo "Credentials: ${password} ${username}"
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" \
  -o Dpkg::Options::="--force-confold" install mysecureshell whois procps openssh-server
