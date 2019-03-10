@@ -33,10 +33,10 @@ docker run -d -t -i -v /home/matthew/sftpdata:/data -d -p 22222:22 medway3 \
 
 
 
-docker build . -t medway
+docker build . -t unraid-sftp
 docker run -d -t -i -e password='secret' \
 -e username='sftpuser' \
--e publickey='key' \
+-e publickey='ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAwYRKaVwx7WS/MSsoAk7sqFPP1LO04FcF+y/erPOEbCUU2gOa/BXFzBvFLADMgKUjdoDyWvOIonqLrXrkY5wMx8wbGx0Hwx6/B3xexWPKgfxB/r5Nm5hBTst5ANuAk6cE5ENsNFfPMjZ5vPqJZYc1JLwlnwbfhgdBQkNt2+yjNXTGGOhVJBvZmyIt7Y+z16S6qODDMwCLUuCFVA5eg4WJIPrM5E9GjIgwGupnpeq5iMmsJShDafQEwpMyXbjBdXNfS9QbBdc82UvXnoONnZunMMdVdppLybzwCMb+I/LuQs3tLy/MhlQnQOTejEzSE1YpLeH7bk/cbusXJ+IPdoaIOQ== rsa-key-20190309' \
 -p 22222:22 \
 -v /home/matthew/sftpdata:/data \
-medway
+unraid-sftp
