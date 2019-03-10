@@ -1,49 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-  <Name>sftp</Name>
-  <Date>2019-03-10</Date>
-  <Category>Tools / Utilities:System</Category>
-  <Support>https://github.com/mysecureshell/mysecureshell/issues</Support>
-  <Description>for unraid</Description>
-  <Project>https://github.com/mysecureshell/mysecureshell</Project>
-  <Overview>Community app for sftp running on unraid</Overview>
-  <Registry>https://hub.docker.com/r/drbrocoli/unraid-sftp/</Registry>
-  <Repository>drbrocoli/unraid-sftp</Repository>
-  <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
-  <Environment>
-    <Variable>
-      <Name>username</Name>
-      <Value>The username of your new sftpuser</Value>
-    </Variable>
-    <Variable>
-      <Name>password</Name>
-      <Value>The ssh key for your new user</Value>
-    </Variable>
-    <Variable>
-      <Name>publickey</Name>
-      <Value>The password for your new user</Value>
-    </Variable>
-  </Environment>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>22222</HostPort>
-        <ContainerPort>22</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/vault</HostDir>
-      <ContainerDir>/data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <ExtraParams></ExtraParams>
-  <DonateText>Donations</DonateText>
-  <DonateLink>https://github.com/mysecureshell/mysecureshell</DonateLink>
-  <BaseImage>debidebian:stable</BaseImage>
+<?xml version="1.0"?>
+<Container version="2">
+	<Name>unraid-sftp</Name>
+	<Repository>drbrocoli/unraid-sftp</Repository>
+	<Registry>https://hub.docker.com/r/drbrocoli/unraid-sftp//Dockerfile/</Registry>
+	<Network>bridge</Network>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support>https://hub.docker.com/r/drbrocoli/unraid-sftp/</Support>
+	<Project/>
+	<Overview>Community app for sftp running on unraid</Overview>
+	<Category/>
+	<WebUI/>
+	<TemplateURL/>
+	<Icon>https://vignette.wikia.nocookie.net/southpark/images/5/55/Randy_Lorde.jpg/revision/latest/scale-to-width-down/310?cb=20141011212058</Icon>
+	<ExtraParams/>
+	<PostArgs/>
+	<CPUset/>
+	<DateInstalled>1552244134</DateInstalled>
+	<DonateText/>
+	<DonateLink/>
+	<Description>Community app for sftp running on unraid</Description>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>22222</HostPort>
+				<ContainerPort>22</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/mnt/user/vault/</HostDir>
+			<ContainerDir>/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Environment>
+		<Variable>
+			<Value>sftpuser</Value>
+			<Name>username</Name>
+			<Mode/>
+		</Variable>
+		<Variable>
+			<Value>password</Value>
+			<Name>password</Name>
+			<Mode/>
+		</Variable>
+		<Variable>
+			<Value>ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAwYRKaVwx7WS/MSsoAk7sqFPP1LO04FcF+y/erPOEbCUU2gOa/BXFzBvFLADMgKUjdoDyWvOIonqLrXrkY5wMx8wbGx0Hwx6/B3xexWPKgfxB/r5Nm5hBTst5ANuAk6cE5ENsNFfPMjZ5vPqJZYc1JLwlnwbfhgdBQkNt2+yjNXTGGOhVJBvZmyIt7Y+z16S6qODDMwCLUuCFVA5eg4WJIPrM5E9GjIgwGupnpeq5iMmsJShDafQEwpMyXbjBdXNfS9QbBdc82UvXnoONnZunMMdVdppLybzwCMb+I/LuQs3tLy/MhlQnQOTejEzSE1YpLeH7bk/cbusXJ+IPdoaIOQ== rsa-key-20190309</Value>
+			<Name>publickey</Name>
+			<Mode/>
+		</Variable>
+	</Environment>
+	<Labels/>
+	<Config Name="data" Target="/data" Default="" Mode="rw" Description="data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/vault/</Config>
+	<Config Name="sftp" Target="22" Default="22222" Mode="tcp" Description="sftp traffic port" Type="Port" Display="always" Required="true" Mask="false">22222</Config>
+	<Config Name="username" Target="username" Default="sftpuser" Mode="" Description="The username of your new sftpuser" Type="Variable" Display="always" Required="true" Mask="false">sftpuser</Config>
+	<Config Name="password" Target="password" Default="password" Mode="" Description="The password for your new user" Type="Variable" Display="always" Required="true" Mask="false">password</Config>
+	<Config Name="publickey" Target="publickey" Default="ssh-rsa" Mode="" Description="The ssh key for your new user" Type="Variable" Display="always" Required="true" Mask="false">ssh-rsa</Config>
 </Container>
