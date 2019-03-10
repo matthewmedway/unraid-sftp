@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>sftp</Name>
+  <Description>for unraid</Description>
+  <Registry>https://registry.hub.docker.com/u/drbrocoli/unraid-sftp/</Registry>
+  <Repository>drbrocoli/unraid-sftp</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>22222</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/vault</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <ExtraParams></ExtraParams>
+</Container>
