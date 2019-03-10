@@ -40,3 +40,6 @@ docker run -d -t -i -e password='secret' \
 -p 22222:22 \
 -v /home/matthew/sftpdata:/data \
 unraid-sftp
+
+
+ln --symbolic --force /dev/stdout /var/log/sftp-server.log
