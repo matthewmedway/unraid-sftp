@@ -1,10 +1,10 @@
-FROM ubuntu:18.04
+FROM debian:stable
 
 MAINTAINER Matthew Medway
 
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" \
- -o Dpkg::Options::="--force-confold" install mysecureshell whois procps openssh-server
+ -o Dpkg::Options::="--force-confold" install mysecureshell whois procps openssh-server perl
 RUN apt-get clean
 RUN mkdir /var/run/sshd
 RUN mkdir /data
