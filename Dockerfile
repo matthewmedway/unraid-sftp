@@ -17,7 +17,7 @@ ADD sshd_config /etc/ssh/sshd_config
 ADD sftp_config /etc/ssh/sftp_config
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
-RUN RUN ln -sf /dev/stdout /var/log/sftp-server.log
+RUN ln -sf /dev/stdout /var/log/sftp-server.log
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 
