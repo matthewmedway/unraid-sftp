@@ -34,6 +34,7 @@
 #       ConnectionMaxLife       1d      #limits connection lifetime to 1 day
 
 #       Charset                 "ISO-8859-15"   #set charset of computer
+        LogFile /dev/console
 </Default>
 
 #Rules only for group ftp
