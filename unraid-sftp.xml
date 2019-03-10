@@ -59,6 +59,6 @@
 	<Config Name="data" Target="/data" Default="" Mode="rw" Description="data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/vault/</Config>
 	<Config Name="sftp" Target="22" Default="22222" Mode="tcp" Description="sftp traffic port" Type="Port" Display="always" Required="true" Mask="false">22222</Config>
 	<Config Name="username" Target="username" Default="sftpuser" Mode="" Description="The username of your new sftpuser" Type="Variable" Display="always" Required="true" Mask="false">sftpuser</Config>
-	<Config Name="password" Target="password" Default="password" Mode="" Description="The password for your new user" Type="Variable" Display="always" Required="true" Mask="false">password</Config>
+	<Config Name="password" Target="password" Default="password" Mode="" Description="The password for your new user" Type="Variable" Display="always" Required="true" Mask="true">password</Config>
 	<Config Name="publickey" Target="publickey" Default="ssh-rsa" Mode="" Description="The ssh key for your new user" Type="Variable" Display="always" Required="true" Mask="false">ssh-rsa</Config>
 </Container>
