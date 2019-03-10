@@ -6,7 +6,20 @@
   <Repository>drbrocoli/unraid-sftp</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Name>username</Name>
+      <Value>The username of your new sftpuser</Value>
+    </Variable>
+    <Variable>
+      <Name>password</Name>
+      <Value>The ssh key for your new user</Value>
+    </Variable>
+    <Variable>
+      <Name>publickey</Name>
+      <Value>The password for your new user</Value>
+    </Variable>
+  </Environment>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
