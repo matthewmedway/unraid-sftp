@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
   <Name>sftp</Name>
+  <Date>2019-03-10</Date>
+  <Category>Tools / Utilities:System</Category>
+  <Support>https://github.com/mysecureshell/mysecureshell/issues</Support>
   <Description>for unraid</Description>
+  <Project>https://github.com/mysecureshell/mysecureshell</Project>
   <Overview>Community app for sftp running on unraid</Overview>
-  <Registry>https://registry.hub.docker.com/u/drbrocoli/unraid-sftp/</Registry>
+  <Registry>https://hub.docker.com/r/drbrocoli/unraid-sftp/</Registry>
   <Repository>drbrocoli/unraid-sftp</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -39,4 +43,7 @@
     </Volume>
   </Data>
   <ExtraParams></ExtraParams>
+  <DonateText>Donations</DonateText>
+  <DonateLink>https://github.com/mysecureshell/mysecureshell</DonateLink>
+  <BaseImage>debidebian:stable</BaseImage>
 </Container>
