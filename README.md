@@ -11,7 +11,7 @@ Make the data on unraid available via sftp
     drbrocoli/unraid-sftp
 
 ### Environment Variables
-You must run the image with the following environment labels:
+You must run the image with the following environment variables:
 
 | Environment Label | Function |
 |-------------------|----------|
