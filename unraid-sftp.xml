@@ -2,6 +2,7 @@
 <Container>
   <Name>sftp</Name>
   <Description>for unraid</Description>
+  <Overview>Community app for sftp running on unraid</Overview>
   <Registry>https://registry.hub.docker.com/u/drbrocoli/unraid-sftp/</Registry>
   <Repository>drbrocoli/unraid-sftp</Repository>
   <BindTime>true</BindTime>
