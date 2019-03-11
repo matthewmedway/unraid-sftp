@@ -17,6 +17,7 @@ ADD sshd_config /etc/ssh/sshd_config
 ADD sftp_config /etc/ssh/sftp_config
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+RUN usermod -u 99 nobody
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 

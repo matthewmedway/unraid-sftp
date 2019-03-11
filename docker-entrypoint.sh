@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 #check if user already exists
 if id "$username" >/dev/null 2>&1; then
