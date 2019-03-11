@@ -7,7 +7,7 @@
         GlobalDownload          50k     #total speed download for all clients
                                         # o -> bytes   k -> kilo bytes   m -> mega bytes
         GlobalUpload            0       #total speed download for all clients (0 for unlimited)
-        Download                5k      #limit speed download for each connection
+        Download                0      #limit speed download for each connection
         Upload                  0       #unlimit speed upload for each connection
         StayAtHome              true    #limit client to his home
         VirtualChroot           true    #fake a chroot to the home account
