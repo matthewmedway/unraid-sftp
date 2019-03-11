@@ -42,4 +42,6 @@ docker run -d -t -i -e password='secret' \
 unraid-sftp
 
 
-ln --symbolic --force /dev/stdout /var/log/sftp-server.log
+ln --symbolic --force /dev/console /var/log/sftp-server.log
+
+docker run -d --name='unraid-sftp-test' --net='bridge' -e TZ="America/New_York" -e 'username'='sftpuser' -e 'password'='test123' -e 'publickey'='ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAwYRKaVwx7WS/MSsoAk7sqFPP1LO04FcF+y/erPOEbCUU2gOa/BXFzBvFLADMgKUjdoDyWvOIonqLrXrkY5wMx8wbGx0Hwx6/B3xexWPKgfxB/r5Nm5hBTst5ANuAk6cE5ENsNFfPMjZ5vPqJZYc1JLwlnwbfhgdBQkNt2+yjNXTGGOhVJBvZmyIt7Y+z16S6qODDMwCLUuCFVA5eg4WJIPrM5E9GjIgwGupnpeq5iMmsJShDafQEwpMyXbjBdXNfS9QbBdc82UvXnoONnZunMMdVdppLybzwCMb+I/LuQs3tLy/MhlQnQOTejEzSE1YpLeH7bk/cbusXJ+IPdoaIOQ== rsa-key-20190309' -p '22222:22/tcp' -v '/home/matthew/sftpdata':'/data':'rw' 'drbrocoli/unraid-sftp' 
