@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM ubuntu:18.04
 
 MAINTAINER Matthew Medway
 
@@ -7,7 +7,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confde
  -o Dpkg::Options::="--force-confold" install mysecureshell whois procps openssh-server perl
 RUN apt-get clean
 RUN mkdir /var/run/sshd
-RUN mkdir /data
 RUN echo 'root:root' | chpasswd
 RUN chmod 4755 /usr/bin/mysecureshell
 
